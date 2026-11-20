@@ -21,4 +21,6 @@ Chip-independent SFP module core for U-Boot ports. Vendored (copy + drift check)
 - Test corpus: captured EEPROMs of real modules (FS SFP-10GSR-85, FS SFP-10G-T, Cisco GLC-SX-MM, GLC-T, GLC-T-TX clone, CISCO-JPC DAC, Finisar FTLX8571D3BCL, Avago AFBR-57F5AMZ); each repo adds its own.
 
 ## Status
-Empty scaffold. First content comes from awto-tl-st1008f (`rtk_sfp*.c`, `cmd_rtk.c` SFP part, the generator, the EEPROM dumps).
+- v0 (2026-11-20): `src/sfp_core.[ch]` = unpad, fixups (FS/OEM SFP-10G-T), CC_BASE/CC_EXT, media name, interface support (Linux `parse_support`), quirk table, interface pick, power. Ported from awto-tl-st1008f `rtk_sfpmode.c` / `rtk_sfppower.c` / `cmd_rtk.c`; no I/O.
+- Test: `make test` decodes every `eeprom/*.hex` (15 real modules, dumped with `tools/dump_eeprom.py`) and diffs against `test/expected.txt`; `make golden` regenerates it after a reviewed change.
+- Not yet: DDM scaling, copper PHY tables, ops-table glue, the Linux-extraction generator; awto-tl-st1008f still carries its own copy.
