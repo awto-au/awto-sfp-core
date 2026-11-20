@@ -1,5 +1,6 @@
 CISCO-EQUIV_GLC-T-TX_ZZ170727123.hex: 256B padded=0 fixup=0 ccb=1 cce=1 media=1000BASE-T mask=0x0c phy=1 if=sgmii(eeprom) power=1200mW(copper table) CISCO-EQUIV/GLC-T-TX/ZZ170727123
 CISCO-FINISAR_GLC-SX-MM_H33A650.hex: 256B padded=1 fixup=0 ccb=1 cce=1 media=1000BASE-SX mask=0x04 phy=0 if=1000base-x(eeprom) power=1000mW(declared) CISCO-FINISAR/GLC-SX-MM/H33A650
+CISCO-FINISAR_GLC-SX-MM_H33A663.hex: 256B padded=1 fixup=0 ccb=1 cce=1 media=1000BASE-SX mask=0x04 phy=0 if=1000base-x(eeprom) power=1000mW(declared) CISCO-FINISAR/GLC-SX-MM/H33A663
 CISCO-FINISAR_GLC-T_MTC106627.hex: 256B padded=0 fixup=0 ccb=1 cce=1 media=1000BASE-T mask=0x0c phy=1 if=sgmii(eeprom) power=1200mW(copper table) CISCO-FINISAR/GLC-T/MTC106627
 CISCO-FINISAR_GLC-T_MTC106630.hex: 256B padded=0 fixup=0 ccb=1 cce=1 media=1000BASE-T mask=0x0c phy=1 if=sgmii(eeprom) power=1200mW(copper table) CISCO-FINISAR/GLC-T/MTC106630
 CISCO-JPC_P3410UD05000-1_JPC223107Q1.hex: 256B padded=0 fixup=0 ccb=1 cce=1 media=SFP+ DAC (passive) mask=0x34 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) CISCO-JPC/P3410UD05000-1/JPC223107Q1
