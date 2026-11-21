@@ -5,12 +5,22 @@ CISCO-FINISAR_GLC-T_MTC106627.hex: 256B padded=0 fixup=0 ccb=1 cce=1 media=1000B
 CISCO-FINISAR_GLC-T_MTC106630.hex: 256B padded=0 fixup=0 ccb=1 cce=1 media=1000BASE-T mask=0x0c phy=1 if=sgmii(eeprom) power=1200mW(copper table) CISCO-FINISAR/GLC-T/MTC106630
 CISCO-JPC_P3410UD05000-1_JPC223107Q1.hex: 256B padded=0 fixup=0 ccb=1 cce=1 media=SFP+ DAC (passive) mask=0x34 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) CISCO-JPC/P3410UD05000-1/JPC223107Q1
 FS_SFP-10G-T_G2210210056.hex: 512B padded=0 fixup=1 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=1 if=10gbase-r(eeprom) power=3000mW(copper table) FS/SFP-10G-T/G2210210056
+  ddm ok=1 ext=0 alarms=1 temp=11200 vcc=32765 bias=3000 tx=5000 rx=4000 thr_temp=-1280/19200/-2560/20480
 FS_SFP-10GSR-85_F2130412915.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2130412915
+  ddm ok=1 ext=0 alarms=1 temp=10832 vcc=33010 bias=3096 tx=5304 rx=6300 thr_temp=0/17920/-2560/20480
 FS_SFP-10GSR-85_F2130412917.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2130412917
+  ddm ok=1 ext=0 alarms=1 temp=10397 vcc=32873 bias=1 tx=1 rx=1 thr_temp=0/17920/-2560/20480
 FS_SFP-10GSR-85_F2130412918.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2130412918
+  ddm ok=1 ext=0 alarms=1 temp=11158 vcc=32915 bias=1 tx=1 rx=1 thr_temp=0/17920/-2560/20480
 FS_SFP-10GSR-85_F2140097681.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2140097681
+  ddm ok=1 ext=0 alarms=1 temp=11593 vcc=32902 bias=3360 tx=5457 rx=1 thr_temp=0/17920/-2560/20480
 FS_SFP-10GSR-85_F2140097682.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2140097682
+  ddm ok=1 ext=0 alarms=1 temp=12141 vcc=33074 bias=3480 tx=5832 rx=1 thr_temp=0/17920/-2560/20480
 FS_SFP-10GSR-85_F2140098879.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2140098879
+  ddm ok=1 ext=0 alarms=1 temp=12028 vcc=33224 bias=3432 tx=5505 rx=5600 thr_temp=0/17920/-2560/20480
 FS_SFP-10GSR-85_F2220031783.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2220031783
+  ddm ok=1 ext=0 alarms=1 temp=11158 vcc=33071 bias=1 tx=1 rx=1 thr_temp=0/17920/-2560/20480
 FS_SFP-10GSR-85_F2220031784.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2220031784
+  ddm ok=1 ext=0 alarms=1 temp=12028 vcc=32750 bias=1 tx=1 rx=1 thr_temp=0/17920/-2560/20480
 FS_SFP-10GSR-85_F2220031785.hex: 512B padded=0 fixup=0 ccb=1 cce=1 media=10GBASE-SR mask=0x20 phy=0 if=10gbase-r(eeprom) power=1000mW(declared) FS/SFP-10GSR-85/F2220031785
+  ddm ok=1 ext=0 alarms=1 temp=11158 vcc=32750 bias=3264 tx=6090 rx=4620 thr_temp=0/17920/-2560/20480

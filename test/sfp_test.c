@@ -87,6 +87,15 @@ int main(int argc, char **argv)
 		       names[i], len, padded, fixed, ccb, cce,
 		       sfp_media_name(buf, len) ? sfp_media_name(buf, len) : "-", qmask, phy, ifname[pick], why_q,
 		       mw, why_p, vendor, pn, sn);
+		if (len >= 256 + SFP_DDM_A2_LEN) {	/* A0 at 0, A2 at 256 in the dump */
+			struct sfp_ddm dd;
+			int ok = sfp_ddm_decode(buf, len, buf + 256, len - 256, &dd);
+
+			printf("  ddm ok=%d ext=%d alarms=%d temp=%d vcc=%u bias=%u tx=%u rx=%u thr_temp=%d/%d/%d/%d\n", ok,
+			       dd.calibrated_ext, dd.supports_alarms, dd.temp[SFP_DDM_CURR], dd.vcc[SFP_DDM_CURR],
+			       dd.bias[SFP_DDM_CURR], dd.tx_power[SFP_DDM_CURR], dd.rx_power[SFP_DDM_CURR],
+			       dd.temp[SFP_DDM_LWARN], dd.temp[SFP_DDM_HWARN], dd.temp[SFP_DDM_LALRM], dd.temp[SFP_DDM_HALRM]);
+		}
 	}
 	return 0;
 }

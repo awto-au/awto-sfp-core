@@ -23,4 +23,5 @@ Chip-independent SFP module core for U-Boot ports. Vendored (copy + drift check)
 ## Status
 - v0 (2026-11-20): `src/sfp_core.[ch]` = unpad, fixups (FS/OEM SFP-10G-T), CC_BASE/CC_EXT, media name, interface support (Linux `parse_support`), quirk table, interface pick, power. Ported from awto-tl-st1008f `rtk_sfpmode.c` / `rtk_sfppower.c` / `cmd_rtk.c`; no I/O.
 - Test: `make test` decodes every `eeprom/*.hex` (15 real modules, dumped with `tools/dump_eeprom.py`) and diffs against `test/expected.txt`; `make golden` regenerates it after a reviewed change.
-- Not yet: DDM scaling, copper PHY tables, ops-table glue, the Linux-extraction generator; awto-tl-st1008f still carries its own copy.
+- v1 (2026-11-21): `src/sfp_ddm.c` (`sfp_ddm_decode`: SFF-8472 scaling incl. external calibration, integer only, origin ethtool sfpdiag.c) and `src/sfp_phy.c` (`sfp_phy_identify`, `sfp_phy_init`: 88E1111 SGMII table + sequencer over `struct sfp_phy_ops`; AQR113C recognised, no table: firmware-managed, clause-45, Linux does the host side). `make test` also runs `test/phy_test.c` (mock 88E1111: end state, ID1 realign, reset timeout, I/O failure) and the golden file carries a `ddm` line for the modules with an A2 page.
+- Not yet: the Linux-extraction generator, UNVR/US-48 vendoring.
