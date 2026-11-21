@@ -23,4 +23,8 @@ golden: build/sfp_test
 clean:
 	rm -rf build
 
-.PHONY: test golden clean
+# drift check against a pinned kernel: make check-linux SFP_C=path/to/drivers/net/phy/sfp.c
+check-linux:
+	python3 tools/check_linux_sfp.py $(SFP_C)
+
+.PHONY: test golden clean check-linux

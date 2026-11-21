@@ -1,0 +1,18 @@
+# vendor|part|reason: Linux sfp_quirks[] entries that do not change the EEPROM decode this core feeds (checked by tools/check_linux_sfp.py)
+# RollBall: Linux switches the PHY access protocol (MDIO-over-I2C RollBall) and waits up to 25 s; the core has no clause-45/RollBall PHY access (AQR113C is left alone, #127)
+FLYPRO|SFP-10GT-CS-30M|sfp_fixup_rollball: RollBall PHY access protocol and retry period, no ID rewrite
+FS|SFP-2.5G-T|sfp_fixup_rollball_wait4s: RollBall + 4 s module wait before PHY access
+FS|SFP-10GM-T|sfp_fixup_rollball_wait4s: RollBall + 4 s module wait before PHY access
+OEM|HC-10GE-113C|sfp_fixup_rollball: RollBall PHY access protocol and retry period
+Turris|RTSFP-2.5G|sfp_fixup_rollball: RollBall PHY access protocol and retry period
+Turris|RTSFP-10|sfp_fixup_rollball: RollBall PHY access protocol and retry period
+Turris|RTSFP-10G|sfp_fixup_rollball: RollBall PHY access protocol and retry period
+XikeStor|SKT-2.5G-100M|sfp_fixup_xikestor_2_5g: RollBall + 1 s module wait
+# TX_FAULT / LOS pins carry a serial port on these modules: Linux ignores the pins; the core reads no pins
+BIDB|X-ONU-SFPP|sfp_fixup_potron: ignore TX_FAULT/LOS pins, long startup
+FS|XGS-SFP-ONT-MACI|sfp_fixup_potron: ignore TX_FAULT/LOS pins, long startup
+H-COM|SPP425H-GAB4|sfp_fixup_potron: ignore TX_FAULT/LOS pins, long startup
+YV|SFP+ONU-XGSPON|sfp_fixup_potron: ignore TX_FAULT/LOS pins, long startup
+OEM|XGSPONST2001|sfp_fixup_potron (prefix match): ignore TX_FAULT/LOS pins, long startup
+HALNy|HL-GSFP|sfp_fixup_halny_gsfp: ignore TX_FAULT/LOS pins
+OEM|SFP-GE-T|sfp_fixup_ignore_tx_fault: ignore the TX_FAULT pin
