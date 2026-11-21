@@ -100,5 +100,8 @@ int main(void)
 	power_on(&m, 0, 0);
 	m.fail_reg = 2;
 	check(sfp_phy_identify(&o) == SFP_PHY_NONE && sfp_phy_init(&o, SFP_PHY_NONE) == 0, "no answer: none");
+
+	check(sfp_soft_tx_disable_set(0xc2) && !sfp_soft_tx_disable_set(0x82), "soft TX_DISABLE bit detected");
+	check(sfp_soft_tx_disable_value(0xc2) == 0x82 && sfp_soft_tx_disable_value(0x82) == 0x82, "clear value keeps the other bits");
 	return fails ? 1 : 0;
 }
